@@ -1,5 +1,6 @@
 body {
   background-color: #f9f9fa;
+  font-family: Arial, sans-serif;
 }
 
 .padding {
@@ -148,9 +149,68 @@ h6 {
   border-radius: 5px;
   cursor: pointer;
   position: fixed;
-  top: 25px;
+  top: 65px;
   right: 68px;
 }
 .apagar-conta-btn:hover {
   background-color: #ff0000;
+}
+
+form {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button[type="submit"],
+button[type="button"] {
+  background-color: #882627;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #ff0000;
+}
+
+.botao {
+  display: inline-block;
+  background-color: #882627;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.botao:hover {
+  background-color: #ff0000;
+  cursor: pointer;
 }
