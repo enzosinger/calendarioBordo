@@ -3,100 +3,126 @@
   <meta charset="UTF-8" />
 </head>
 
-<div class="container">
-  <img src="logo.png" alt="Calendário Bordô" class="logocalendario" />
-  <div class="calendar-base">
-    <div></div>
-    <div class="year">2023</div>
-    <!-- year -->
+<body>
+  <div class="container">
+    <img src="logo.png" alt="Calendário Bordô" class="logocalendario" />
+    <div class="calendar-base">
+      <div></div>
+      <div class="year">2023</div>
+      <!-- year -->
 
-    <div class="triangle-left"></div>
-    <!--triangle -->
-    <div class="triangle-right"></div>
-    <!--  triangle -->
+      <div class="triangle-left"></div>
+      <!--triangle -->
+      <div class="triangle-right"></div>
+      <!--  triangle -->
 
-    <div class="months">
-      <span class="month-hover">Jan</span>
-      <span class="month-hover">Fev</span>
-      <span class="month-hover">Mar</span>
-      <strong class="month-color">Abr</strong>
-      <span class="month-hover">Mai</span>
-      <span class="month-hover">Jun</span>
-      <span class="month-hover">Jul</span>
-      <span class="month-hover">Ago</span>
-      <span class="month-hover">Set</span>
-      <span class="month-hover">Out</span>
-      <span class="month-hover">Nov</span>
-      <span class="month-hover">Dez</span>
+      <div class="months">
+        <span class="month-hover">Jan</span>
+        <span class="month-hover">Fev</span>
+        <span class="month-hover">Mar</span>
+        <strong class="month-color">Abr</strong>
+        <span class="month-hover">Mai</span>
+        <span class="month-hover">Jun</span>
+        <span class="month-hover">Jul</span>
+        <span class="month-hover">Ago</span>
+        <span class="month-hover">Set</span>
+        <span class="month-hover">Out</span>
+        <span class="month-hover">Nov</span>
+        <span class="month-hover">Dez</span>
+      </div>
+      <!-- months -->
+      <hr class="month-line" />
+
+      <div class="days">DOM SEG TER QUA QUI SEX SAB</div>
+      <!-- days -->
+
+      <div class="num-dates">
+        <div class="first-week">
+          <span class="grey">26 27 28 29 30 31</span> 01
+        </div>
+        <!-- first week -->
+        <div class="second-week">02 03 04 05 06 07 08</div>
+        <!-- week -->
+        <div class="third-week">09 10 11 12 13 14 15</div>
+        <!-- week -->
+        <div class="fourth-week">16 17 18 19 20 21 22</div>
+        <!-- week -->
+        <div class="fifth-week">23 24 25 26 27 28 29</div>
+        <!-- week -->
+        <div class="sixth-week">
+          30 <span class="grey">01 02 03 04 05 06</span>
+        </div>
+        <!-- week -->
+      </div>
+      <!-- num-dates -->
+      <div class="event-indicator"></div>
+      <!-- event-indicator -->
+      <!-- active-day -->
+      <div class="event-indicator two"></div>
+      <!-- event-indicator -->
     </div>
-    <!-- months -->
-    <hr class="month-line" />
+    <!-- calendar-base -->
+    <div class="calendar-left">
+      <div class="hamburger">
+        <div class="burger-line"></div>
+        <!-- burger-line -->
+        <div class="burger-line"></div>
+        <!-- burger-line -->
+        <div class="burger-line"></div>
+        <!-- burger-line -->
+      </div>
+      <!-- hamburger -->
 
-    <div class="days">DOM SEG TER QUA QUI SEX SAB</div>
-    <!-- days -->
+      <div class="ola">Olá, Thiago!</div>
 
-    <div class="num-dates">
-      <div class="first-week">
-        <span class="grey">26 27 28 29 30 31</span> 01
+      <div id="menu" class="menu">
+        <div class="perfil"><a href="{% url 'perfil' %}">Meu perfil</a></div>
+
+        <div class="perfil">
+          <a href="{% url 'perfil' %}">Área de Moderador</a>
+        </div>
+
+        <div class="perfil"><a href="{% url 'perfil' %}">Sair</a></div>
       </div>
-      <!-- first week -->
-      <div class="second-week">02 03 04 05 06 07 08</div>
-      <!-- week -->
-      <div class="third-week">09 10 11 12 13 14 15</div>
-      <!-- week -->
-      <div class="fourth-week">16 17 18 19 20 21 22</div>
-      <!-- week -->
-      <div class="fifth-week">
-        23 <strong class="white">24</strong> 25 26 27 28 29
+
+      <div class="num-date">24</div>
+      <!--num-date -->
+      <div class="day"><br />SEGUNDA</div>
+      <!--day -->
+      <div class="current-events">
+        Eventos do dia
+        <br />
+        <ul>
+          <li
+            class="evento"
+            title="Apresentação em sala, minimo 5 e máximo 10 minutos"
+          >
+            Apresentação calendário bordô Exp.Criativa
+          </li>
+          <li
+            class="evento"
+            title="Entregar no Canvas, criar código em python!"
+          >
+            TDE Segurança da Informação
+          </li>
+        </ul>
+        <span class="posts">Ver próximos eventos</span>
       </div>
-      <!-- week -->
-      <div class="sixth-week">
-        30 <span class="grey">01 02 03 04 05 06</span>
-      </div>
-      <!-- week -->
+      <!--current-events -->
     </div>
-    <!-- num-dates -->
-    <div class="event-indicator"></div>
-    <!-- event-indicator -->
-    <div class="active-day"></div>
-    <!-- active-day -->
-    <div class="event-indicator two"></div>
-    <!-- event-indicator -->
+    <!-- calendar-left -->
   </div>
-  <!-- calendar-base -->
-  <div class="calendar-left">
-    <div class="hamburger">
-      <div class="burger-line"></div>
-      <!-- burger-line -->
-      <div class="burger-line"></div>
-      <!-- burger-line -->
-      <div class="burger-line"></div>
-      <!-- burger-line -->
-    </div>
-    <!-- hamburger -->
-
-    <div class="num-date">24</div>
-    <!--num-date -->
-    <div class="day"><br />SEGUNDA</div>
-    <!--day -->
-    <div class="current-events">
-      Eventos do dia
-      <br />
-      <ul>
-        <li
-          class="evento"
-          title="Apr inícem sala, mintação em salatação em sala, minimo 5 e máximo 10 minutos, início , minimo 5 e máximo 10 minutos, início imo 5 e máximo 10 minutos, início tação em sala, minimo 5 e máximo 10 minutos, início 8h"
-        >
-          Apresentação calendário bordô Exp.Criativa
-        </li>
-        <li class="evento" title="Entregar no Canvas, criar código em python!">
-          TDE Segurança da Informação
-        </li>
-      </ul>
-      <span class="posts">Ver próximos eventos</span>
-    </div>
-    <!--current-events -->
-  </div>
-  <!-- calendar-left -->
-</div>
+</body>
 <!-- container -->
+
+<script>
+  // Get the hamburger element and the menu element
+  var hamburger = document.querySelector(".hamburger");
+  var menu = document.querySelector("#menu");
+
+  // Add a click event listener to the hamburger
+  hamburger.addEventListener("click", function () {
+    // Toggle the menu display
+    menu.style.display = menu.style.display === "none" ? "block" : "none";
+  });
+</script>
