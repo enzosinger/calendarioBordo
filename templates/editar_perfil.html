@@ -1,0 +1,66 @@
+{% load static %}
+<head>
+  
+  <link rel="stylesheet" href="{% static 'styles/perfil.css' %}" />
+</head>
+
+<div class="page-content page-container" id="page-content">
+  <div class="padding">
+    <div class="row container d-flex justify-content-center">
+      <div class="col-xl-6 col-md-12">
+        <div class="card user-card-full">
+          <div class="row m-l-0 m-r-0">
+            <div class="col-sm-4 bg-c-lite-green user-profile">
+              <div class="card-block text-center text-white">
+                <div class="m-b-25">
+                  <img
+                    src="https://img.icons8.com/bubbles/100/000000/user.png"
+                    class="img-radius"
+                    alt="User-Profile-Image"
+                  />
+                </div>
+                <h3 class="f-w-601">{{ id.username }}</h3>
+                <p class="f-w-601">{% if id.is_moderator %}Moderador{% else %}Aluno{% endif %}</p>
+                <i
+                  class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"
+                ></i>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="card-block">
+                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informações pessoais</h6>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">Edite sua conta</p>
+                    <h6 class="text-muted f-w-400">
+                      <form action="{% url 'editar_perfil' %}" method="POST" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      <div>
+                        {% for field in form.visible_fields %}
+                        <div>
+                            <label for="{{ field.id_for_label }}" style="color:#D9D9D9; margin-bottom: 5px;">{{field.label}}</label>
+                            {{ field }}
+                        </div>
+                        {% endfor %}
+                        <div class="col-12 text-center">
+                          <button class="btn" style="padding: top 5px;" type="submit">Enviar</button>
+                      </div>
+                    </br>
+                    </form>
+                    <a href="{% url 'logout' %}" class="botao">Deslogar</a>
+                    </div>
+                    </h6>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div>
+  <button class="apagar-conta-btn" ><a href="{% url 'apagar_conta' %}">Apagar Conta</a></button>
+</div>
+</div>

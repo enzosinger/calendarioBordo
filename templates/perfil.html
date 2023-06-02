@@ -1,0 +1,76 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'styles/perfil.css' %}" />
+</head>
+
+<div class="page-content page-container" id="page-content">
+  <div class="padding">
+    <div class="row container d-flex justify-content-center">
+      <div class="col-xl-6 col-md-12">
+        <div class="card user-card-full">
+          <div class="row m-l-0 m-r-0">
+            <div class="col-sm-4 bg-c-lite-green user-profile">
+              <div class="card-block text-center text-white">
+                <div class="m-b-25">
+                  <img
+                    src="https://img.icons8.com/bubbles/100/000000/user.png"
+                    class="img-radius"
+                    alt="User-Profile-Image"
+                  />
+                </div>
+                <h3 class="f-w-601">{{ id.username }}</h3>
+                <p class="f-w-601">{% if id.is_moderator %}Moderador{% else %}Aluno{% endif %}</p>
+                <i
+                  class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"
+                ></i>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="card-block">
+                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informações pessoais</h6>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">Email</p>
+                    <h6 class="text-muted f-w-400">
+                      {% if id.email == null or id.email == "" %}
+                      Sua conta não possui email cadastrado.
+                      {% else %}
+                      {{id.email}}
+                      {% endif %}
+                    </h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">Curso</p>
+                    <h6 class="text-muted f-w-400">
+                      {% if id.curso == null or id.curso == "" %}
+                      Sua conta não possui curso cadastrado.
+                      {% else %}
+                      {{id.curso}}
+                      {% endif %}
+                    </h6>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <p class="m-b-10 f-w-600">Período</p>
+                  <h6 class="text-muted f-w-400">
+                    {% if id.periodo == null or id.periodo == "" %}
+                      Não foi encontrado o registro do seu período em sua conta.
+                      {% else %}
+                      {{id.periodo}}
+                      {% endif %}
+                  </h6>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div>
+  <button class="apagar-conta-btn"><a href="{% url 'editar_perfil' %}">Editar Conta</a></button>
+</div>
+</div>

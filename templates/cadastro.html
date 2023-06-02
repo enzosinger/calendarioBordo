@@ -1,0 +1,42 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+</head>
+<img src="{% static 'assets/logo.png' %}" alt="Calendário Bordô" class="logocalendario" />
+<div class="container">
+  <a class="links" id="paracadastro"></a>
+  <a class="links" id="paralogin"></a>
+  <br><br><br><br><br><br>
+  <div class="content">
+    <!--FORMULÁRIO DE LOGIN-->
+
+    <!--FORMULÁRIO DE CADASTRO-->
+    <div id="cadastro">
+      <form method="POST" action="{% url 'cadastro' %}">
+        {% csrf_token %}
+        {% if messages %}
+        {% for message in messages %}
+        <div>
+            <p class="">{{message}}</p>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <h1>Cadastro</h1>
+        {% for field in form.visible_fields %}
+        <p>
+          <label>{{field.label}}</label>
+          {{field}}
+        </p>
+        {% endfor %}
+        <p>
+          <input type="submit" value="Cadastrar" />
+        </p>
+
+        <p class="link">
+          Já tem conta?
+          <a href="{% url 'login' %}"> Ir para Login </a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
