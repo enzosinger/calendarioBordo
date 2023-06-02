@@ -1,0 +1,59 @@
+<head>
+  <link rel="stylesheet" href="cadastro_style.css" />
+</head>
+
+<div class="container">
+  <a class="links" id="paracadastro"></a>
+  <a class="links" id="paralogin"></a>
+
+  <div class="content">
+    <!--FORMULÁRIO DE LOGIN-->
+    <div id="login">
+      <form method="post" action="">
+        <h1>Cadastro de eventos</h1>
+        <p>
+          <label for="nome_evento">Nome do evento</label>
+          <input
+            id="nome_evento"
+            name="nome_evento"
+            required="required"
+            type="text"
+          />
+        </p>
+
+        <p>
+          <label for="descricao_evento">Descrição do evento</label>
+          <input
+            id="descricao_evento>"
+            name="descricao_evento"
+            required="required"
+            type="text"
+          />
+        </p>
+
+        <p>
+          <label for="manterlogado">Data do evento</label>
+          <input
+            type="text"
+            name="data_evento"
+            id="data_evento"
+            required="required"
+            value=""
+            placeholder="DD/MM/AAAA"
+          />
+        </p>
+
+        <p>
+          <input type="submit" value="Cadastrar Evento" />
+        </p>
+
+        <p class="link">
+          <a href="{% url 'perfil' %}">Cancelar</a>
+        </p>
+      </form>
+    </div>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
