@@ -26,15 +26,21 @@ a.links {
   position: relative;
 }
 
+.content2 {
+  width: 80%;
+  margin: 0px auto;
+  position: relative;
+}
+
 /* formatando o cabeçalho dos formulários */
 h1 {
   font-size: 48px;
   color: #882627;
-  padding: 10px 0;
+  padding: 5px 0;
   font-family: Arial, sans-serif;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 h1:after {
   content: " ";
@@ -53,7 +59,7 @@ h1:after {
 }
 
 p {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 p:first-child {
   margin: 0px;
@@ -96,7 +102,7 @@ input:not([type="checkbox"]) {
 
 /*estilo do botão submit */
 input[type="submit"] {
-  width: 100% !important;
+  width: 47.45% !important;
   cursor: pointer;
   background: #882627;
   padding: 8px 5px;
@@ -112,6 +118,26 @@ input[type="submit"] {
   transition: all 0.2s linear;
 }
 input[type="submit"]:hover {
+  background: #a22e2f;
+}
+
+input[type="button"] {
+  width: 47.45% !important;
+  cursor: pointer;
+  background: #882627;
+  padding: 8px 5px;
+  color: #fff;
+  font-size: 20px;
+  border: 1px solid #fff;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 1px #333;
+
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+
+  transition: all 0.2s linear;
+}
+input[type="button"]:hover {
   background: #a22e2f;
 }
 
@@ -162,7 +188,6 @@ input[type="submit"]:hover {
   background: rgb(247, 247, 247);
   border: 1px solid #882627;
 
-  -webkit-box-shadow: 5px;
   border-radius: 5px;
 
   -webkit-animation-duration: 0.5s;
@@ -233,4 +258,87 @@ input[type="submit"]:hover {
     opacity: 0;
     transform: translateX(-20px);
   }
+}
+
+.cadastrarevento {
+  background-color: #9c9c9c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  top: 65px;
+  right: 68px;
+}
+.cadastrarevento:hover {
+  background-color: #882627;
+}
+
+.gerenciarevento {
+  background-color: #9c9c9c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  top: 65px;
+  right: 68px;
+}
+.gerenciarevento:hover {
+  background-color: #882627;
+}
+
+.editarevento {
+  background-color: #9c9c9c;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.editarevento:hover {
+  background-color: #882627;
+}
+
+.moderador {
+  position: absolute;
+  top: 0px;
+  width: 88%;
+  padding: 16px 6% 20px 6%;
+  margin: 0 0 15px 0;
+  background: rgb(247, 247, 247);
+  border: 1px solid #882627;
+
+  border-radius: 5px;
+}
+
+.logocalendario {
+  position: fixed;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 441px;
+  height: 99px;
+  z-index: 1 !important;
+}
+
+.eventos {
+  font-weight: normal;
+}
+
+.lista {
+  position: absolute;
+  top: 0;
+  width: 95%;
+  padding: 10px 6% 10px 6%;
+  margin-bottom: 10px;
+  background: rgb(247, 247, 247);
+  border: 1px solid #882627;
+  border-radius: 5px;
+}
+
+li {
+  padding-bottom: 8px;
 }
