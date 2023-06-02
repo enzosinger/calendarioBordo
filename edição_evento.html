@@ -1,0 +1,59 @@
+<head>
+  <link rel="stylesheet" href="cadastro_style.css" />
+</head>
+
+<div class="container">
+  <a class="links" id="paracadastro"></a>
+  <a class="links" id="paralogin"></a>
+
+</br></br>
+  <div class="content">
+    <div id="login">
+      <form method="post" action="">
+        <h1>Edição de evento</h1>
+        <p>
+          <label for="nome_evento">Nome do evento</label>
+          <input
+            id="nome_evento"
+            name="nome_evento"
+            required="required"
+            type="text"
+            placeholder="Prova Segurança da informação"
+          />
+        </p>
+
+        <p>
+          <label for="descricao_evento">Descrição do evento</label>
+          <input
+            id="descricao_evento>"
+            name="descricao_evento"
+            required="required"
+            type="text"
+            placeholder="Prova sem consulta, no papel!"
+          />
+        </p>
+
+        <p>
+          <label for="manterlogado">Data do evento</label>
+          <input
+            type="text"
+            name="data_evento"
+            id="data_evento"
+            required="required"
+            value=""
+            placeholder="01/06/2023"
+          />
+        </p>
+
+        <p>
+          <input type="submit" value="Salvar alterações" />
+          <input type="button" value="Excluir Evento" />
+        </p>
+
+        <p class="link">
+          <a href="{% url 'perfil' %}">Cancelar</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
