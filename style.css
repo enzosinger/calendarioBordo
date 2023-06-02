@@ -8,6 +8,12 @@ body {
   background-color: lightgray;
   font-family: "Kanit", sans-serif;
   z-index: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
 }
 
 .container {
@@ -56,6 +62,7 @@ body {
   position: relative;
   right: 90px;
   top: 36px;
+  cursor: pointer;
 }
 
 .triangle-right {
@@ -68,6 +75,7 @@ body {
   position: relative;
   left: 20px;
   top: 36px;
+  cursor: pointer;
 }
 .triangle-left:hover {
   border-right: 10px solid#882627;
@@ -86,6 +94,7 @@ body {
   left: 350px;
   top: 90px;
   word-spacing: 10px;
+  cursor: pointer;
 }
 
 .month-line {
@@ -190,7 +199,7 @@ body {
   background-color: #882627;
   position: absolute;
   z-index: -1 !important;
-  left: 20%;
+  left: 16.5%;
   transform: translateX(-50%);
   color: white;
 }
@@ -201,9 +210,15 @@ body {
   left: 25px;
 }
 
-.burger-line:hover,
-.hamburger:hover {
-  background-color: #882627 !important;
+.hamburger:hover .burger-line {
+  background-color: #bbbbbb;
+}
+
+.burger-line {
+  width: 20px;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin-bottom: 4px;
 }
 
 .burger-line {
@@ -240,9 +255,35 @@ body {
 
 .posts {
   text-decoration: underline;
+  cursor: pointer;
 }
 .posts:hover {
-  color: #bbbbbb !important;
+  color: #000000 !important;
+}
+
+.ola {
+  position: relative;
+  cursor: pointer;
+  color: #ffffff;
+  margin-left: 60px;
+  margin-top: 9px;
+}
+
+.perfil {
+  position: relative;
+  cursor: pointer;
+  color: #882627;
+  margin-top: 1.5px;
+  margin-bottom: 1.5px;
+}
+
+.perfil a {
+  color: #882627 !important;
+  text-decoration: none;
+}
+
+.perfil a:hover {
+  color: #4b4b4b !important;
 }
 
 .create-event {
@@ -288,10 +329,6 @@ body {
   position: fixed;
   z-index: 999;
   display: none;
-}
-
-body {
-  background-color: #f9f9fa;
 }
 
 .padding {
@@ -461,4 +498,26 @@ h6 {
 
 ul {
   margin-left: -12px;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #bbbbbb;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  left: 55px;
+  position: absolute;
+  width: 125px;
+  padding: 4px;
+  background-color: #ffffff;
+  border-radius: 10px 10px 10px 10px;
 }
